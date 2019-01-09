@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>	
+body{
+background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+.arrow-border::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-size: 24px 48px;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(45deg, transparent 34%, #fff 34%, #fff 66%, transparent 66%), -webkit-linear-gradient(315deg, transparent 34%, #fff 34%, #fff 66%, transparent 66%);
+    background-image: -moz-linear-gradient(45deg, transparent 34%, #fff 34%, #fff 66%, transparent 66%), -moz-linear-gradient(315deg, transparent 34%, #fff 34%, #fff 66%, transparent 66%);
+    background-image: linear-gradient(45deg, transparent 34%, #fff 34%, #fff 66%, transparent 66%), linear-gradient(315deg, transparent 34%, #fff 34%, #fff 66%, transparent 66%);
+}
+
+.spinner-wrapper{
+     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.spinner{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    height: 80px;
+    width: 80px;
+    background-color: transparent;
+    box-sizing: border-box;
+    opacity: 1;
+    border-radius: 50%;
+/*     border-top: 4px solid #; */
+    border-left: 4px solid #ae63e4;
+/*     border-bottom: 4px solid #; */
+    border-right: 3px solid rgba(255, 255, 255, 0.35);
+    animation: spin 1s infinite;
+  
+      }
+
+  
+      @keyframes spin {
+        0% {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+	</style>
+</head>
+<body>
+<div class="arrow-border">
+</div>
+<div class="spinner-wrapper">
+<div class="spinner">
+  </div>
+</div>
+</body>
+</html>
